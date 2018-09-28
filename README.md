@@ -1,4 +1,4 @@
-Clusters de News Headlines
+# Clusters de News Headlines
 ## Introdução
 
 Neste trabalho explorou-se o método de aprendizado de máquina não supervisionado para realizar o agrupamento do conjunto de manchetes.
