@@ -1,18 +1,9 @@
-# Clusters de News Headlines
-## Introdução
+# Clusters of News Headlines
 
-Neste trabalho explorou-se o método de aprendizado de máquina não supervisionado para realizar o agrupamento do conjunto de manchetes.
+## Activities
 
-Tendo em visa o tipo dos dados, é necessário realizar o pré processamento dos textos a fim de extrair os features, que serão futuramente usados no algorítimo de clusterização.
-
-Nas seções seguintes serão apresentados o conjunto de dados que será utilizado nesta atividade e os procedimentos realizados durante o processo de agrupamento.
-
-## Atividades
-Para identificar o numero mais adequado de clusters, foram realizadas e apresentadas as seguintes atividades:
-
-* Pré processamento do dataset e extração de Feature;
-* TF-IDF, K-mens e a escolha de K;
-* Experimentos.
+* Dataset preprocessing and feature extraction;
+* TF-IDF, K-mens and the choice of K;
 
 
 ## O dataset
