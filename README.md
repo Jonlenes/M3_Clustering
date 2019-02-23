@@ -46,12 +46,14 @@ Principal component analysis (PCA) and T-Distributed Stochastic Neighbouring Ent
 * Disregarding words that appears in over 50% of documents;
 * Disregarding words that do not occur in by at least 5 documents, to 1-gram, going up to 2 documents to 4-gram (with increasing gram, the amount of repetition in documents decreases);
 
-### Experimento 1
+### Experiment 1
 
 * Features: 500;
 * Dataset: 10%;
 * Feature extraction: 1-gram, 2-gram, 3-gram and 4-gram;
 * K: between: 2 and 250.
+
+#### Elbow
 
 <p align="center">
   <img src="imgs/1-gram.png">
@@ -69,13 +71,7 @@ Principal component analysis (PCA) and T-Distributed Stochastic Neighbouring Ent
   <img src="imgs/4-gram.png">
 </p>
     
-
-
-Os gráficos para 1-gram até 4-gram mantiveram uma curvatura similar, sendo a principal diferença o valor da função de custo, que para o 1-gram está na casa de 10^5 e no 4-gram em 10^3   
-
-Para analisar melhor eles valores, foi realizada a plotagem desses valores com K variando de 10 em 10 para encontrar esses pontos, utilizando o método de Elbow pode se encontrar diversos valores para K, como será analisado ainda nesta seção.  
-
-No mesmo teste também foi realizado a analise de silhouette, os gráficos para o 1-gram e 4-gram podem ser visto nas figuras abaixo.
+#### Silhouette analysi
 
 <p align="center">
   <img src="imgs/silhouette_0.png">
@@ -85,12 +81,7 @@ No mesmo teste também foi realizado a analise de silhouette, os gráficos para 
   <img src="imgs/silhouette_3.png">
 </p>
 
-
-Como pode ser analisado no gráfico, os valores silhouette aumentaram com o aumento da quantidade de termos (gram), onde tem-se valor máximo de 0.16 para o 1-gram e de 0.99 para o 4-gram.
-
-Um ponto importante já pode ser analisada aqui, com 4-gram tem-se os menores valores para a função de custo e os maiores valores para silhouette, indicando ser um bom candidato para uma boa extração de features. 
-
-### Experimento 2
+### Experiment 2
 Com o intuindo de melhor o agrupamento, foi aumentada a quantidade de features para 1000 e diminuída a quantidade de K testados (2 <= K <= 100) para melhor visualização do gráfico e diminuição do tempo de execução. Os resultados para 3-gram podem ser visto na Figura.
 
 <p align="center">
