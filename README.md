@@ -1,5 +1,7 @@
 # Clusters of News Headlines
 
+For more information, read Report.pdf (in Portuguese) or contact me.
+
 ## Activities
 
 * Dataset preprocessing and feature extraction;
