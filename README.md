@@ -40,19 +40,18 @@ Elbow and Silhouette analysis.
 ## PCA e t-SNE
 Principal component analysis (PCA) and T-Distributed Stochastic Neighbouring Entities (t-SNE).
 
-## Experimentos com todo o dataset
+## Experiments with the whole dataset
 
-Os experimentos realizados desconsideram algumas palavras do vocabulário no processo de extração de features, conforme lista abaixo:
-
-
-* Desconsideração das stopwords;
-* Desconsideração de palavras que aparece em mais 50% dos documentos;
-* Desconsideração de palavras que não ocorrem em pelo ao menos 5 documentos, para 1-gram, indo até 2 documentos para 4-gram (com o aumento do gram, a quantidade de repetição nos documentos diminui);
+* Removal of stopwords;
+* Disregarding words that appears in over 50% of documents;
+* Disregarding words that do not occur in by at least 5 documents, to 1-gram, going up to 2 documents to 4-gram (with increasing gram, the amount of repetition in documents decreases);
 
 ### Experimento 1
 
-A quantidade de features utilizada inicialmente foi 500 para a execução do primeiro teste, com 10% do dataset. Esse experimento foi realizado utilizando 1-gram, 2-gram, 3-gram e 4-gram para a extração de features.
-Após a extração foi realizado o agrupamento com K-means para valores de K variando de 2 a 250, conforme pode ser analisada nas figuras abaixo. 
+* Features: 500;
+* Dataset: 10%;
+* Feature extraction: 1-gram, 2-gram, 3-gram and 4-gram;
+* K: between: 2 and 250.
 
 <p align="center">
   <img src="imgs/1-gram.png">
@@ -175,9 +174,7 @@ Com a divisão do dataset por ano, facilitou a utilização do algoritmo de agru
 
 Considerando a tabela por ano é possível perceber que o valor de K = 3 aparecer em quase todos os anos, sendo um possível escolha para valor de K.
 
-## Visualização dos clusters
-
-Segue alguns dos gráficos montados no decorrer dos experimentos desse trabalho, demostrando como os estão agrupados visualmente, conforme figura esquerda  que mostra o valor K=3, e na figura da direita apresenta os 5 clusters. No geral pode ser visualizados 3 grandes grupos e mais alguns pequenos grupos.
+## Cluster visualization
 
 <p align="center">
   <img src="imgs/3-clusters.png">
@@ -186,19 +183,3 @@ Segue alguns dos gráficos montados no decorrer dos experimentos desse trabalho,
 <p align="center">
   <img src="imgs/5-clusters.png">
 </p>
-
-
-## Conclusão e Trabalhos Futuros
-
-O número de clusters encontrados não é necessariamente o melhor, nem o absoluto, pois o numero de clusters adequado pode depender do objetivo do agrupado.
-
-Neste trabalho foi escolhido alguns valores para K baseado na função de custo e analise de silhouette. Existe outras analises e diversos experimentos que ainda podem ser feito com este dataset para aprimorar ainda mais o valor de K.
-
-
-
-
-
-
-
-
-
