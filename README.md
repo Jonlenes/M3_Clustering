@@ -6,7 +6,7 @@
 * TF-IDF, K-mens and the choice of K;
 
 
-## O dataset
+## The dataset
 Million News Headlines contains 1 million data published over a 15-year period by Australian news source ABC (Australian Broadcasting Corp.).
 
 | Year     | Samples  |   Year     |   Samples         |
@@ -20,67 +20,25 @@ Million News Headlines contains 1 million data published over a 15-year period b
 | 2009    |   68867   |   2017    |   44182  |
 | 2010    |   67715   |     |
 
-Esta amostra será utilizada no primeiro processamento que consiste na preparação dos dados para a extração de features, sendo discutido na seção a seguir.
-
-## Pré-processamento
-
-Nesta etapa foi necessário realizar algumas alterações básicas do dataset, tais como:
-
-* Conversão para lowercase: conversão de todos os caracteres do dataset para lowercase;
-* Remoção de pontuação: todas as pontuações foram removidas utilizando a lista disponibilizada em punctuation;
-* Remoção de palavras por tamanho: todas as palavras de tamanho menor ou igual a 2 foram removidas;
-* Stemming: processo de reduzir as palavras flexionadas (ou, às vezes, derivadas) para a palavra raiz , base ou forma raiz - geralmente uma forma de palavra escrita. Este processo foi realizado em todo o dataset utilizando a NFTL;
-* Remoção de números: todos os caracteres numéricos foram removidos.
+## Pre-processing
+* Conversion to lowercase;
+* Punctuation removal;
+* Removal of words with size less than or equal to 2;
+* Stemming;
+* Removal of numbers.
 
 
 ## Feature Extration
-
-O próximo passo consiste no processo de extração de features dos arquivos de texto. Para isso foi utilizada a técnica de Bag of Words, onde é desconsiderando a gramática e a ordem das palavras, mas mantendo a multiplicidade. Esta abordagem, olha-se o histograma das palavras dentro do texto, ou seja, considerando cada palavra contada como uma característica.
-
-Essa foi a estrategia utilizada para a extração de features neste trabalho, utilizando a sklearn para realizar essa contagem.
+Bag of Words
 
 ## TF-IDF
-
-Um problema com a utilização da frequência de palavras é que algumas palavras que aparecem com muita frequência começam a dominar no documento, mas podem não conter tanta "informação" em comparação com palavras menos frequentes.
-
-Uma abordagem é redimensionar a frequência das palavras pela frequência com que aparecem em todos os documentos, de modo que as pontuações para palavras frequentes, que também são frequentes em todos os documentos, sejam penalizadas. Essa abordagem para pontuação é chamada de Frequência de Termo - Frequência de Documento Inversa (TF-IDF).
-
-Neste trabalho foi aplicada a IDF após toda extração de features utilizando a sklearn.
-
 ## K-Means
-K-Means clustering faz parte do grupo de método  de aprendizado não supervisionado, que é utilizado quando é necessário analisar dados que não contém labels. 
 
-Este algoritmo encontra grupos nos dados, funcionando iterativamente atribuindo cada ponto de dados a um dos  grupos K com base nas características fornecidas.
-
-Para a sua execução é necessário informa-lo o valor de K desejado, pois o mesmo não o encontra sozinho. Nesse momento, também é necessário realizar a escolha de K, conforme apresentado na próxima seção. 
-
-## Métodos para a escolha de K
-
-Neste trabalho foram utilizados dois métodos para escolher o valor de K, sendo eles o método de Elbow e a análise de Silhouette .
-
-### O método de Elbow
-A ideia do método Elbow é executar o agrupamento K-Means no conjunto de dados para um intervalo de valores de K e para cada um dos valores calcular a função de custo.
-
-Próximo passo consiste em plotar um gráfico de cost function vs valor de K. Se o gráfico de linha tiver a forma de um braço, então o cotovelo (elbow) no braço é um possível valor para K. 
-
-O objetivo é obter um valor pequeno para a função de custo, mas o custo tende a diminuir para 0 à medida que aumenta o numero K. Então, deve se escolher um pequeno valor de K que ainda tenha um custo baixo, e o cotovelo geralmente representa onde se começa a ter valores decrescentes aumentando K.
-
-### Análise de Silhouette
-A análise de Silhouette é uma maneira de medir a proximidade de cada ponto em um cluster com os pontos em seus clusters vizinhos.
-
-Isso pode ser utilizado para descobrir o valor ideal para k durante o agrupamento K-Means. Os valores de Silhouette estão no intervalo de [-1, 1], onde um valor +1 indica que o exemplo está longe de seu cluster vizinho e muito próximo ao cluster que está designado. Da mesma forma, o valor -1 indica que o ponto está próximo ao cluster vizinho do que ao cluster que está designado, e um valor de 0 significa que está no limite da distância entre os dois clusters. Portanto, quanto maior o este valor, melhor é a configuração do cluster.
+### Methods for choosing K
+Elbow and Silhouette analysis.
 
 ## PCA e t-SNE
-Uma etapa importante do processo de clustering é visualização dos resultados. Neste trabalho foi utilizada uma combinação de 
-Principal component analysis (PCA) e T-Distributed Stochastic Neighbouring Entities (t-SNE) para isso.
-
-O PCA é uma técnica para reduzir o número de dimensões em um conjunto de dados retendo a maioria das informações. Ele tenta fornecer um número mínimo de variáveis que mantém a quantidade máxima de variação ou informações sobre como os dados originais são distribuídos. Neste caso, quando o numero de dimensões é reduzido para algo que possa ser plotado, pode ser utilizado para fazer a visualização dos resultados.
-
-O t-SNE é outra técnica para redução de dimensionalidade e é particularmente adequada para a visualização de conjuntos de dados de alta dimensão, sendo que este utiliza uma técnica probabilística para fazer a redução. 
-
-No entanto, t-SNE é computacionalmente pesado, causando algumas limitações ao uso dessa técnica. Por exemplo, uma das recomendações é que, no caso de dados dimensionais muito altos, talvez seja necessário aplicar outra técnica de redução de dimensionalidade antes de usar o t-SNE.
-
-Então, nesse trabalho foi utilizado o PCA para encontrar as 20 melhores componentes, e estes foram utilizando pelo t-SNE para obter o resultado final.
+Principal component analysis (PCA) and T-Distributed Stochastic Neighbouring Entities (t-SNE).
 
 ## Experimentos com todo o dataset
 
