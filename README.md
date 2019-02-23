@@ -56,29 +56,29 @@ Principal component analysis (PCA) and T-Distributed Stochastic Neighbouring Ent
 #### Elbow
 
 <p align="center">
-  <img src="imgs/1-gram.png">
+  <img width="600" src="imgs/1-gram.png">
 </p>
 
 <p align="center">
-  <img src="imgs/2-gram.png">
+  <img width="600" src="imgs/2-gram.png">
 </p>
   
 <p align="center">
-  <img src="imgs/3-gram.png">
+  <img width="600" src="imgs/3-gram.png">
 </p>
   
 <p align="center">
-  <img src="imgs/4-gram.png">
+  <img width="600" src="imgs/4-gram.png">
 </p>
     
-#### Silhouette analysi
+#### Silhouette analysis
 
 <p align="center">
-  <img src="imgs/silhouette_0.png">
+  <img width="600" src="imgs/silhouette_0.png">
 </p>
 
 <p align="center">
-  <img src="imgs/silhouette_3.png">
+  <img width="600" src="imgs/silhouette_3.png">
 </p>
 
 ### Experiment 2
@@ -89,7 +89,7 @@ Principal component analysis (PCA) and T-Distributed Stochastic Neighbouring Ent
 * K: between: 2 and 100.
 
 <p align="center">
-  <img src="imgs/10k_3-gram.png">
+  <img width="600" src="imgs/10k_3-gram.png">
 </p>
 
 ### Experiment 3
@@ -100,11 +100,11 @@ Principal component analysis (PCA) and T-Distributed Stochastic Neighbouring Ent
 * 2 <= K <= 20.
 
 <p align="center">
-  <img src="imgs/all_4-gram.png">
+  <img width="600" src="imgs/all_4-gram.png">
 </p>
 
 <p align="center">
-  <img src="imgs/all_4-gram1.png">
+  <img width="600" src="imgs/all_4-gram1.png">
 </p>
 
 | Grams  | K                             |
@@ -123,9 +123,13 @@ Principal component analysis (PCA) and T-Distributed Stochastic Neighbouring Ent
 | 4-gram | 12 | 0.9761      | 
 
 **Cluster 1**: vic countri hour podcast, rural qld rural report, rural nsw rural report, sa countri hour podcast, nation rural news wednesday, man face court accus, aung san suu kyi, test day live blog, nation rural news tuesday, speak abc news breakfast;
+
 **Cluster 2**: nation rural news monday, youth mental health servic, form guid men m, gold coast man face, gold coast light rail, gold coast hit run, gold coast high rise, gold coast commonwealth game, given suspend jail term, given good behaviour bond;
+
 **Cluster 3**: nsw countri hour wednesday, countri hour wednesday decemb, countri hour wednesday septemb, countri hour wednesday novemb, countri hour wednesday april, countri hour wednesday june, countri hour wednesday octob, countri hour wednesday januari, countri hour wednesday august, countri hour wednesday februari;
+
 **Cluster 4**: tas countri hour friday, countri hour friday octob, countri hour friday april, countri hour friday june, countri hour friday august, countri hour friday juli, countri hour friday march, countri hour friday novemb, heavi rain caus flood, heavi rain caus flash;
+
 **Cluster 5**: wa countri hour podcast, countri hour podcast octob, countri hour podcast th, countri hour podcast decemb, countri hour podcast septemb, countri hour podcast juli, countri hour podcast august, countri hour podcast februari, countri hour podcast januari, countri hour podcast march.
     
 ## Experiments by year
@@ -143,9 +147,9 @@ Principal component analysis (PCA) and T-Distributed Stochastic Neighbouring Ent
 ## Cluster visualization
 
 <p align="center">
-  <img src="imgs/3-clusters.png">
+  <img width="600" src="imgs/3-clusters.png">
 </p>
 
 <p align="center">
-  <img src="imgs/5-clusters.png">
+  <img width="600" src="imgs/5-clusters.png">
 </p>
