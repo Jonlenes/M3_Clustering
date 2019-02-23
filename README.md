@@ -7,12 +7,9 @@
 
 
 ## O dataset
-A Million News Headlines é o dataset utilizado para este trabalho. Este contém 1 milhão de dados de notícias publicadas durante um período de 15 anos pela fonte de notícias australiana ABC (Australian Broadcasting Corp).
+Million News Headlines contains 1 million data published over a 15-year period by Australian news source ABC (Australian Broadcasting Corp.).
 
-Será utilizado inicialmente uma amostra de 10% deste dataset (100.000 exemplos), selecionados aleatoriamente e em seguida os dados serão divididos por ano (Conforme tabela abaixo), sendo trabalhado cada ano separadamente. 
-
-
-| Ano     | Total de Exemplos  |   Ano     |   Total de Exemplos         |
+| Year     | Samples  |   Year     |   Samples         |
 |---|-------|-------|---------|
 | 2003    |   59343   |   2011    |   69919   |
 | 2004    |   65975   |   2012    |   78547  |
